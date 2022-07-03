@@ -14,7 +14,7 @@
     "tests:all": "npm run tests:wolfie",
     "tests:wolfie": "jest src/Wolfie2D/Tests --verbose=false --noStackTrace --passWithNoTests"
   },
-  "author": "Joe Weaver, Peter Walsh",
+  "author": "Joe Weaver",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^27.5.1",
