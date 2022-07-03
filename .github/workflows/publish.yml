@@ -46,10 +46,13 @@ jobs:
         run: |
           git config user.name ${{ github.actor }} 
 
-      # Create the download directory
-      - name: Make the Download Directory
-        run: mkdir Wolfie2D
-      
+      # Create the download directory in docs/downloads folder
+      - name: Create Download Directory
+        run: |
+          cd docs
+          cd downloads
+          mkdir Wolfie2D
+
       # Copies project files to the download folder
       - name: Copy Project Files
         run: |
