@@ -11,7 +11,7 @@
     "build": "gulp build",
     "docs": "npx typedoc --tsconfig ./tsconfig.json",
     "tests": "npm run tests:all",
-    "tests:all": "npm run wolfie",
+    "tests:all": "npm run tests:wolfie",
     "tests:wolfie": "jest src/Wolfie2D/Tests --verbose=false --noStackTrace --passWithNoTests"
   },
   "author": "Joe Weaver, Peter Walsh",
