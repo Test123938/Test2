@@ -45,6 +45,25 @@ jobs:
       - name: Config User and Email
         run: |
           git config user.name ${{ github.actor }} 
+
+      # Create the download directory
+      - name: Make the Download Directory
+        run: mkdir Wolfie2D
+      
+      # Copies project files to the download folder
+      - name: Copy Project Files
+        run: |
+          cp -r src Wolfie2D
+          cp -r dist Wolfie2D
+          cp .gitignore gulpfile.js package.json package-lock.json tsconfig.json Wolfie2D
+
+      # Add, commit, and push the download folder to main
+      - name: Add, commit, push 
+        run: |
+          git add Wolfie2D
+          git commit -m "Generated download for Wolfie2D-${{ inputs.version }}"
+          git push
+
       # Tag and push this release
       - name: Tag and Push
         run: |
