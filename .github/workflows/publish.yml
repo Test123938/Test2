@@ -49,8 +49,6 @@ jobs:
       # Create the download directory
       - name: Create Download Directory
         run: |
-          cd docs
-          cd _downloads
           mkdir Wolfie2D
 
       # Copies project files to the download folder
