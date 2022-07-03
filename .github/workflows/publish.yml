@@ -1,0 +1,51 @@
+# A workflow for publishing releases of the Wolfie2D GameEngine.
+name: Publish
+
+# Publishing can only be done manually. 
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release (SemVer)'     
+        required: true
+        default: 'vX.Y.Z'
+
+# There are some things that need to happen before a release is published:
+#
+# 1. Check that the version is valid
+# 2. Check that the CI tests pass
+# 3. Publish the release version
+jobs: 
+
+  # Step 1 - Validate the Version
+  Version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Semantic Version
+        run: |
+          npm install semver
+          npx semver ${{ inputs.version }}
+
+  # Step 2 - Validate the CI tests
+  CI:
+    needs: Version
+    uses: ./.github/workflows.ci.yml
+
+  # Step 3 - Actually publish the release
+  Release:
+    runs-on: ubuntu-latest
+    needs: CI
+      # Get whatever branch we're publishing to
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref_name }}
+      # Configure github username - keep track of whoever is publishing
+      - name: Config User and Email
+        run: |
+          git config user.name ${{ github.actor }} 
+      # Tag and push this release
+      - name: Tag and Push
+        run: |
+          git fetch origin
+          git tag ${{ inputs.version }}
+          git push origin ${{ inputs.version }}
