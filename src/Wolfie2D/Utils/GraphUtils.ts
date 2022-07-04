@@ -1,6 +1,6 @@
 import Graph from "../DataTypes/Graphs/Graph";
 import EdgeNode from "../DataTypes/Graphs/EdgeNode";
-import Heap from "../DataTypes/Heap";
+import Heap from "../DataTypes/Collections/Heap";
 
 /** A class to provides some utility functions for graphs */
 export default class GraphUtils {
