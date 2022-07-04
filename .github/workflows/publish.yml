@@ -61,13 +61,13 @@ jobs:
       # Zip download folder and move to docs/downloads folder
       - name: Zip Download Folder
         run: |
-          zip -r Wolfie2DTest.zip Wolfie2D
-          mv Wolfie2DTest.zip docs/downloads
+          zip -r Wolfie2D.zip Wolfie2D
+          mv Wolfie2D.zip docs/downloads
 
       # Add, commit, and push the download folder to main
       - name: Add, commit, push 
         run: |
-          git add docs/downloads/Wolfie2DTest.zip
+          git add docs/downloads/Wolfie2D.zip
           git commit -m "Generated download for Wolfie2D-${{ inputs.version }}"
           git push
 
