@@ -67,7 +67,7 @@ jobs:
       # Add, commit, and push the download folder to main
       - name: Add, commit, push 
         run: |
-          git add docs/downloads/Wolfie2D.zip
+          git add docs/downloads/Wolfie2DTest.zip
           git commit -m "Generated download for Wolfie2D-${{ inputs.version }}"
           git push
 
