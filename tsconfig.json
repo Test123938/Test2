@@ -114,11 +114,11 @@
     "readme": "./README.md",
     "theme": "hierarchy",
     "umlClassDiagram": {
-        "type": "detailed",
+        "type": "simple",
         "location": "local",
         "format": "svg",
         "arrowColor": "#ff0000",
         "boxBorderColor": "#ff0000"
-    }
+    },
   }
 }
