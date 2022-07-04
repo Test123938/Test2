@@ -1,18 +1,59 @@
 # Wolfie2D
-Welcome to the official documentation for Wolfie2D! Wolfie2D is a web-based game engine written in Typescript. Wolfie2D was founded by Joe Weaver and Richard McKenna in 2020. The goal of this website is to provide useful documentation, diagrams, and guides to help you start programming your game in Wolfie2D. 
+Welcome to the official documentation for Wolfie2D! Wolfie2D is a web-based game engine written in Typescript. The goal of this website is to provide useful documentation, diagrams, and guides to help get started with Wolfie2D. 
 
-* API - comprehensive documentation generated from the comments in the Wolfie2D source code. Includes simplified UML diagrams that illustrate relationships and heirarchies in the engine.
-* Demos - coming soon
-* Resources - resources that were referenced while making Wolfie2D.
+<img src="https://img.shields.io/github/license/Test123938/Test2"></img>
+<img src="https://img.shields.io/github/package-json/v/Test123938/Test2"></img>
+<img src="https://img.shields.io/website?url=https%3A%2F%2Ftest123938.github.io%2FTest2%2F"></img>
+
+### Founders
+* Joe Weaver
+* Richard McKenna
+
+### Contributors
+* Joe Weaver | 2020-2021 
+* Zachary Grandison | 2021-2022 
+* Peter Walsh | 2022-present 
+
+
+## Quickstart
+If you're familiar with node projects setting up with Wolfie2D should be straightforward. You can download the project files with the latest version of the Wolfie2D game-engine from the download link.
+
+> The zip file found at the download link on this page is **NOT** the same as the code in the main branch of the Wolfie2D repository on GitHub. If you're trying to make a game with Wolfie2D, then download Wolfie2D from the download link. The zip file at the download link excludes many of the files used to build, test, and document Wolfie2D. 
+
+Once you've unzip the project files and open them in a text editor like Visual Studio Code, install the project dependencies by running `npm install` in the root directory of the project. After running npm install, build the project by running `gulp` in the projects root directory. If you've run gulp successfully, the `dist` folder should contain the files
+
+* `index.html`
+* `bundle.js`
+
+From the root direcctory of the project, the files will be located here:
+```
+.
+├── dist
+│   ├── builtin
+│   ├── demo_assets
+│   ├── bundle.js           <-- 
+│   └── index.html          <-- 
+│
+├── gulpfile.js
+├── package-lock.json
+├── package.json
+├── src
+└── tsconfig.json
+```
+
+Finally, all you have to do is serve the contents of the `dist` folder to the browser. You can do this using web server for chrome or live server or an equivalent. If everything has been done correctly, you should see the default scene for Wolfie2D and be able to move the orange dot around the screen using WASD.
+
+<p align="center"> <img height="200px" width="200px" src="./images/default-scene.png"></img> </p>
+
 
 ## Installation and Setup
-Welcome to Wolfie2D! The purpose of this tutorial is to describe the setup of a new game using Wolfie2d. After following this tutorial, you should know how to set up Wolfie2D and create a simple 2D game using the engine.
+The purpose of this tutorial is to describe the setup of a new game using Wolfie2d. This tutorial is intended for those who have never worked with Wolfie2D or a node project before. After following this tutorial, you should know how to create a simple 2D game using the Wolfie2D game-engine.
 
-This tutorial assumes that you have some familiarity with the following technologies:
+In addition, this tutorial assumes that you have some familiarity with the following technologies:
 * Visual Studio Code (or equivalent text-editor)
 * Node and NPM
-* Git
 * Web Server for Chrome (or equivalent HTTP server)
+
 
 
 

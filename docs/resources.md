@@ -10,6 +10,7 @@ There aren't enough good things to say about this book. So many of its chapters 
 * Component pattern, which is used everywhere, such as for event Receivers and Emitters, or for Tweens and  Animations, or simply for all of the different aspects of GameNodes.
 * The State pattern, for state machines.
 * The Singleton pattern, for a select few classes of which there can only be one instance.
+
 We highly recommend reading the entirety of this book, you'll thank yourself for it later.
 
 ## [Intersection Tests in 2D](https://noonat.github.io/intersect/)
