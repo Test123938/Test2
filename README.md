@@ -1,4 +1,4 @@
-# Wolfie2D
+# Wolfie2D :wolf: 
 A 2D game-engine for creating web-based games.
 
 <img src="https://img.shields.io/github/package-json/v/Test123938/Test2"></img>
